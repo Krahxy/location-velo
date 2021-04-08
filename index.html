@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+	 <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+	<title>VLyon - Location de vélo sur Lyon</title>
+</head>
+
+<body>
+	<!-- EN-TÊTE -->
+	<header id='headerId'> 
+		<div class="line">
+			<h1>• Lyon Bikes</h1>
+		</div>
+		<div class="square"></div>
+		<img class="logoVelo" src="images/logo.png" alt="Logo du VLyon" />
+		<div class="logo"></div>
+	</header>
+
+	<!-- SLIDER -->
+	<section class="slider">
+		<img src="images/diapo/diapo1new.png" alt="Diaporama" id="slide">
+	</section>
+
+	<section class="sliderCommands">
+		<a id="directionLeft"><i class="fas fa-angle-left" ></i></a>
+		<i class="far fa-pause-circle" id="pause"></i>
+		<a id="directionRight"><i class="fas fa-angle-right" ></i></a>
+	</section>
+
+	<!-- SECTION MAP + FORMULAIRE -->
+	<section class="mapForm">
+		
+		<!-- MAP -->
+		<div id="mapSlot">
+			<div id="map"></div>
+		</div>
+
+		<!-- FORMULAIRE -->
+		<div id="form">
+
+			<!-- ALERTE -->
+			<span id="alert">Sélectionner une station</span>
+
+			<div id="reservationDone">
+				<h5>Vous avez réservé un vélo sous le nom de : <span id="nameInfo"></span> <span id="prenameInfo"></span> à l'adresse suivante : <span id="addressInfo"></span></h5>
+				<h5>Temps restant : <span id="countDown"></span></h5>
+				<button type="button"  id="annulerReservation" class="validation_button">Annuler Réservation</button>
+			</div>
+			
+			<!-- DONNEES DE LA STATION -->
+			<div id="station_datas">
+				<h3><span id="station"></span></h3>
+				<h5>État de la station : <span id="status"></span></h5>
+				<h5>Adresse : <span id="address"></span></h5>
+				<h5>Emplacements total : <span id="capacity"></span></h5>
+				<h5>Vélo(s) disponible(s) : <span id="availableBikes"></span></h5>
+
+				<form name="formulaire" method="post" id="formulaire" action="traitement.php">
+					<label for="name"></label><input type="text" name="name" size="" required id="name" placeholder="Nom" class="inputSize" />
+					<label for="prename"></label><input type="text" name="prename" size="" required id="prename" placeholder="Prénom" class="inputSize" />
+					<input type="button" id="send_button" value="Réserver" >
+				</form>
+			</div>
+
+			<!-- CANVAS -->
+			<div id="canvas">
+				<canvas class="roundCorners" id="Signature" style="position: relative; margin: 0; padding: 0; border: 1px solid #c4caac;"></canvas>
+				<div id="buttonDiv">
+					<button type="button"  id="reserver" class="validation_button" >Confirmer la réservation</button>
+					<button type="button"  id="effacerSignature" class="validation_button">Effacer Signature</button>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer>
+		
+	</footer>
+
+	<!-- Liste des scripts -->
+	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+	<script type='text/javascript' src='https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js'></script>
+	<script type="text/javascript" src="timer.js"></script>
+	<script type="text/javascript" src="map.js"></script>
+	<script type="text/javascript" src="slider.js"></script>
+	<script type="text/javascript" src="register.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<!-- Liste des scripts -->
+
+</body>
+</html>

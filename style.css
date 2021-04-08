@@ -1,0 +1,336 @@
+body
+{
+	max-width:100%;
+	width: 100%;
+	padding: 0;
+	margin: auto;
+	background-color: white; /* #d2c8bf : foncé --- #e7e4df : clair */ 
+}
+
+
+
+
+
+/* HEADER  */
+
+header
+{
+	max-width:100%;
+	width: 100vw;
+	height: 15vh;
+}
+
+.line
+{
+	color: white;
+	background-color: black;
+	height: 30px;
+	max-width:100%;
+	width: 100vw;
+	border-bottom: 5px solid#b63b45;
+}
+
+.line h1
+{
+	padding: 0;
+	margin: 0 0 0 15%;
+	font-size: 1.5em;
+	vertical-align: middle;
+	font-family: 'Bebas Neue';
+	letter-spacing: 0.2em;
+}
+
+.square
+{
+	width: 120px;
+	height: 120px;
+	transform: rotate(45deg);
+	background-color: #11bba3 ;
+	position: absolute;
+	left: calc(50% - 60px);
+	top: -60px;
+}
+
+.logo
+{
+	position: absolute;
+	left: calc(50% - 60px);
+}
+
+.logoVelo
+{
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	left: calc(50% - 60px);
+	top: -5px;
+}
+
+
+
+
+
+/* SLIDER */
+
+.slider
+{
+	position: relative;
+	width: 60vw;
+	height: auto;
+	margin: auto;
+	display: block;
+}
+
+#slide
+{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	position: relative;
+	box-shadow: 10px 10px grey;
+}
+
+.fa-angle-left, .fa-angle-right
+{
+	font-size: 2em;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+
+/* SLIDER COMMANDS*/
+
+.sliderCommands
+{
+	display: flex;
+	justify-content: space-between;
+	width: 60vw;
+	height: 40px;
+	margin: auto;
+	margin-top: 15px;
+	padding: 0;
+}
+
+.fa-play-circle, .fa-pause-circle, .fa-angle-left, .fa-angle-right
+{
+	color: #1e1e1e;
+	font-size: 2em;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+/* RESERVATION */
+
+.inputSize {
+	width: auto;
+}
+
+#reservationDone {
+	display: none;
+}
+
+#station, .informationsLast {
+	color: #f3b74d;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-bottom: 3px solid #f3b74d;
+}
+
+#infos {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	font-family: 'Roboto';
+	margin-top: 10vh;
+	margin-bottom: 150px;
+	font-family: 'Roboto';
+}
+
+#formulaire {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mapForm
+{
+	display: flex;
+	justify-content: center;
+	margin: 25px 0 0 0;
+}
+
+#alert {
+	color: red;
+	font-weight: bold;
+
+}
+#map {
+	height: 500px;
+	width: 50vw;
+	margin-right: 3vw;
+	border: 3px solid #ebded4;
+	padding: 2px;
+}
+
+#form {
+	background-color: rgba(255,255,255,0.8);
+	font-family: 'Roboto';
+	width: 35vw;
+	text-align: center;
+	border: 2px solid #ebded4;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#form h2, #form h3, #form p
+{
+	margin: auto;
+}
+
+#form h2
+{
+	margin: 0 0 10px 0;
+	font-weight: 900;
+	font-size: 1.7em;
+}
+
+#form h3
+{
+	font-weight: 900;
+	font-size: 0.9em;
+	color: #64686d;
+	margin: 0 0 5px 0;
+}
+
+#form p
+{
+	font-weight: 500;
+	font-size: 0.9em;
+	margin-bottom: 15px;
+}
+
+input, textarea
+{
+	padding: 8px;
+	font-size: 0.9em;
+	font-weight: 600;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;;
+}
+
+textarea
+{
+	font-family: Roboto;
+	width: 320px;
+	height: 150px;
+	margin-bottom: 25px;
+}
+
+#send_button, .validation_button, #start-button, #timer
+{
+	width: 125px;
+	min-height: 35px;
+	background-color: #5cadd3;
+	color: white;
+	border-radius: 3px;
+	border-bottom: 3px solid #4494bb;
+	padding: 7px 7px 7px 7px;
+	text-align: center;
+	vertical-align: center;
+	font-weight: 500;
+	font-size: 0.9em;
+	text-decoration: none;
+	cursor:pointer;
+}
+
+
+
+
+
+/* CANVAS */
+
+#canvas {
+	display:none;	
+}
+
+#station_datas {
+	display:none;	
+	margin-top:20px;
+}
+
+.informationsLast {
+	margin: 0;
+	color: #f3b74d;
+	padding-bottom: 5px;
+	padding-left: 200px;
+	padding-right: 200px;
+	border-bottom: 3px solid #f3b74d;
+}
+
+#infos h3 {
+	margin: 5px;
+}
+
+#annulerReservation {
+	margin-top: 25px;
+}
+
+
+
+
+
+/* FOOTER */
+
+footer {
+	max-width:100%;
+	width: 100vw;
+	height: 100px;
+	background-color: black;
+	margin-top: 100px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 767px)
+{
+	.mapForm
+	{
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+	}
+
+	#map {
+		max-width: 90vw;
+		width: 100%;
+		margin: auto;
+		height: 300px;
+	}
+
+	#form {
+		max-width: 90vw;
+		width: 100%;
+		margin: auto;
+		border: 0;
+	}
+
+	.square, .logo, .velo, .logoVelo {
+		display: none;
+	}
+
+	.slider, .sliderCommands {
+		display: none;
+	}
+}
